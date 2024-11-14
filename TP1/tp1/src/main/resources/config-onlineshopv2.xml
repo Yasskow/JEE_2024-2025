@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="standardDelivery" class="fr.uge.jee.onlineshop.Standard">
+        <constructor-arg value="999"/>
+    </bean>
+    <bean id="thief" class="fr.uge.jee.onlineshop.Thief"/>
+    <bean id="insuranceAllMembers" class="fr.uge.jee.onlineshop.Return"/>
+
+
+    <bean id="shop" class="fr.uge.jee.onlineshop.OnlineShop">
+        <constructor-arg value="AhMaZone"/>
+        <constructor-arg>
+            <set>
+                <ref bean="standardDelivery"/>
+            </set>
+        </constructor-arg>
+        <constructor-arg>
+            <set>
+                <ref bean="insuranceAllMembers"/>
+                <ref bean="thief"/>
+            </set>
+        </constructor-arg>
+    </bean>
+
+</beans>
