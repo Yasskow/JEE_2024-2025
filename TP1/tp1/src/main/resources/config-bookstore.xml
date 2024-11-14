@@ -21,12 +21,14 @@
     </bean>
 
     <bean id="library" class="fr.uge.jee.bookstore.Library">
-        <constructor-arg>
-            <set>
-                <ref bean="book1"/>
-                <ref bean="book2"/>
-            </set>
-        </constructor-arg>
+<!--        <constructor-arg>-->
+<!--            <set>-->
+<!--                <ref bean="book1"/>-->
+<!--                <ref bean="book2"/>-->
+<!--            </set>-->
+<!--        </constructor-arg>-->
     </bean>
+
+    <bean id="autowire" class="fr.uge.jee.bookstore.Library" autowire="constructor"/>
 
 </beans>
