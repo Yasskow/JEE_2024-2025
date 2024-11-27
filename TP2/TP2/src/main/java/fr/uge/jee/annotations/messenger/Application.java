@@ -13,5 +13,4 @@ public class Application {
         var messenger = applicationContext.getBean(Messenger.class);
         messenger.send("Hello !");
     }
-
 }
