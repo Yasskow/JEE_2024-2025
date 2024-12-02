@@ -26,6 +26,16 @@ public class RectangleServlet extends HttpServlet {
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
+        var heigth = request.getParameter("height");
+        var width = request.getParameter("width");
 
+        if(heigth.matches("[0-9]*") && width.matches("[0-9]*")){
+            var result = Integer.parseInt(heigth) * Integer.parseInt(width);
+            var writer = response.getWriter();
+            writer.println("Area of rectangle is :" + String.valueOf(result));
+            writer.flush();
+        } else{
+
+        }
     }
 }
