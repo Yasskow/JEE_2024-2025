@@ -5,13 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25358a5c-71ca-41e4-91fd-828e679ed07c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../TP2/TP2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP2/TP2/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../TP2/TP2/src/main/java/fr/uge/jee/aop/students/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP2/TP2/src/main/java/fr/uge/jee/aop/students/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../TP2/TP2/src/main/java/fr/uge/jee/aop/students/Lecture.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP2/TP2/src/main/java/fr/uge/jee/aop/students/Lecture.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../TP2/TP2/src/main/java/fr/uge/jee/aop/students/RegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP2/TP2/src/main/java/fr/uge/jee/aop/students/RegistrationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../TP2/TP2/src/main/java/fr/uge/jee/aop/students/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP2/TP2/src/main/java/fr/uge/jee/aop/students/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/jee/springmvc/pokematch/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/jee/springmvc/pokematch/AppController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/jee/springmvc/pokematch/PokematchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/jee/springmvc/pokematch/PokematchService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/jee/springmvc/pokematch/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/jee/springmvc/pokematch/Pokemon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home-form.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +118,7 @@
       <workItem from="1736521601394" duration="97000" />
       <workItem from="1736521871972" duration="15812000" />
       <workItem from="1736596633228" duration="15139000" />
-      <workItem from="1736676877860" duration="3074000" />
+      <workItem from="1736676877860" duration="9192000" />
     </task>
     <servers />
   </component>

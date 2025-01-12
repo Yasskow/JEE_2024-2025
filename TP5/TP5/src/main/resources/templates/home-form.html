@@ -21,6 +21,10 @@
             Your fetish Pokémon is : <span th:text="${fetish}"></span>
         </div>
 
+        <div th:if="${fetish != null}">
+        <img th:src="'data:image/png;base64,' + ${imageURL}" alt="Image du pokemon fetish"/>
+        </div>
+
         <ul>
             <!--/*@thymesVar id="Pokemon" type="fr.uge.jee.springmvc.pokematch.Pokemon"*/-->
             <li th:each="pokemon : ${listOfMostFetish}" th:text="${pokemon}"></li>

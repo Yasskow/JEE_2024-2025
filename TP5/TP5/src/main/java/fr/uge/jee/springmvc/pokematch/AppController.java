@@ -33,8 +33,11 @@ public class AppController {
 
         var fetish = pokematchService.findFetish(user);
         var mostFetish = pokematchService.getMostFetich();
+        var imageURL = pokematchService.ImagetoString(fetish);
+
         model.addAttribute("fetish", fetish);
         model.addAttribute("listOfMostFetish", mostFetish);
+        model.addAttribute("imageURL", imageURL);
         return "home-form";
     }
 }

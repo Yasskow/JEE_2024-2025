@@ -4,10 +4,10 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.util.*;
 
 @Service
 public class PokematchService {
@@ -16,6 +16,7 @@ public class PokematchService {
     private final WebClient webClient;
     private final List<Pokemon> pokemons;
     private final Map<Pokemon, Integer> mostFetish = new HashMap<>();
+    private final Map<Pokemon, byte[]> allImages = new HashMap<>();
 
     private final int limitForMostFetish;
 
@@ -28,22 +29,34 @@ public class PokematchService {
     public record PokemonList(List<Pokemon> results) {
     }
 
-    public record PokemonImage(String sprites) {
-    }
-
     private void addFetish(Pokemon pokemon) {
         synchronized (lock){
             mostFetish.merge(pokemon, 1, Integer::sum);
         }
     }
 
-    public String pokemonImage(Pokemon pokemon){
+    private String getImagePokemon(Pokemon pokemon){
+        return "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pokemon.getUid() + ".png";
+    }
+
+    private byte[] downloadImage(Pokemon pokemon) {
         var response = webClient.get()
-                .uri(pokemon.getUrl())
+                .uri(getImagePokemon(pokemon))
                 .retrieve()
-                .bodyToMono(PokemonImage.class)
+                .bodyToMono(byte[].class)
                 .block();
-        return response.sprites();
+
+        return response;
+    }
+
+    public String ImagetoString(Pokemon pokemon) {
+        var pokeVerif = allImages.get(pokemon);
+        if (pokeVerif == null) {
+            System.out.println("NEW DOWNLOAD");
+            pokeVerif = downloadImage(pokemon);
+            allImages.put(pokemon, pokeVerif);
+        }
+        return Base64.getEncoder().encodeToString(pokeVerif);
     }
 
     public List<Pokemon> getMostFetich() {
@@ -58,6 +71,7 @@ public class PokematchService {
                 .block();
         return response.results();
     }
+
 
     public Pokemon findFetish(User user) {
         if(pokemons == null)
