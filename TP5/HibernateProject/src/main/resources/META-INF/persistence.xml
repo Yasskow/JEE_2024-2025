@@ -27,6 +27,7 @@
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.highlight_sql" value="true"/>
+            <property name="jakarta.persistence.jdbc.url"value="jdbc:p6spy:h2:tcp://localhost/~/h2DB" />
 
         </properties>
 
