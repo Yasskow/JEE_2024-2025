@@ -11,15 +11,14 @@
       <change beforePath="$PROJECT_DIR$/../../TP2/TP2/src/main/java/fr/uge/jee/aop/students/RegistrationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP2/TP2/src/main/java/fr/uge/jee/aop/students/RegistrationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../TP2/TP2/src/main/java/fr/uge/jee/aop/students/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../TP2/TP2/src/main/java/fr/uge/jee/aop/students/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/jee/springmvc/pokematch/AppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/jee/springmvc/pokematch/AppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/jee/springmvc/pokematch/PokematchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/jee/springmvc/pokematch/PokematchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/fr/uge/jee/springmvc/pokematch/Pokemon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/fr/uge/jee/springmvc/pokematch/Pokemon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home-form.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../TP5\exportToHTML" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -118,7 +117,8 @@
       <workItem from="1736521601394" duration="97000" />
       <workItem from="1736521871972" duration="15812000" />
       <workItem from="1736596633228" duration="15139000" />
-      <workItem from="1736676877860" duration="9192000" />
+      <workItem from="1736676877860" duration="10141000" />
+      <workItem from="1736873724577" duration="2650000" />
     </task>
     <servers />
   </component>

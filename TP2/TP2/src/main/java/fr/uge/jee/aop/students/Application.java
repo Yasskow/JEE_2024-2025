@@ -27,9 +27,5 @@ public class Application {
 
         registrationService.printReport();
 
-
     }
-
-
-
 }

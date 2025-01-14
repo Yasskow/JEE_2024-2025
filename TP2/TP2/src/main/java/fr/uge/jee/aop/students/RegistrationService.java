@@ -1,10 +1,12 @@
 package fr.uge.jee.aop.students;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Objects;
 
+@Component
 public class RegistrationService {
 
 
@@ -12,7 +14,6 @@ public class RegistrationService {
     private final Map<Long,Lecture> lecturesById = new HashMap<>();
     private long currentStudentId;
     private long currentLectureId;
-
 
     /**
      *
