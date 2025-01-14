@@ -10,7 +10,7 @@ public class  Application {
         var tx = em.getTransaction();
         try{
             tx.begin();
-            var harry = new Employee("Harry","Potter", 1000);
+            var harry = new Employee("Harry","Potter", 2000);
             em.persist(harry);
             tx.commit();
         } catch (Exception e){
