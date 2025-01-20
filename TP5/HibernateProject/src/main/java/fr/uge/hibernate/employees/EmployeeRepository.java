@@ -16,9 +16,12 @@ public class EmployeeRepository {
      * @param salary
      * @return the id of the newly created employee
      */
-
     public long create(String firstName, String lastName, int salary) {
-        return 1l;
+        return PersistenceUtils.inTransaction(em -> {
+            var employee = new Employee(firstName, lastName, salary);
+            em.persist(employee);
+            return employee.getId();
+        });
     }
 
     /**
@@ -28,6 +31,14 @@ public class EmployeeRepository {
      */
 
     public boolean delete(long id) {
+        PersistenceUtils.inTransaction(em -> {
+            var employee = em.find(Employee.class, id);
+            if(employee == null){
+                throw new IllegalArgumentException();
+            }
+            em.remove(employee);
+            return true;
+        });
         return false;
     }
 
@@ -39,6 +50,13 @@ public class EmployeeRepository {
      */
 
     public boolean update(long id, int salary) {
+        PersistenceUtils.inTransaction(em -> {
+            var student = em.find(Employee.class, id);
+            if(student != null){
+                student.setSalary(salary);
+            }
+            return true;
+        });
         return false;
     }
 
@@ -49,7 +67,13 @@ public class EmployeeRepository {
      */
 
     public Optional<Employee> get(long id) {
-        return null;
+        return PersistenceUtils.inTransaction(em -> {
+            var student = em.find(Employee.class, id);
+            if(student != null){
+                return Optional.of(student);
+            }
+            return Optional.empty();
+        });
     }
 
     /**
@@ -57,7 +81,19 @@ public class EmployeeRepository {
      */
 
     public List<Employee> getAll() {
-        return null;
+        return PersistenceUtils.inTransaction(em -> {
+            var q = "SELECT e FROM Employee e";
+            var query = em.createQuery(q, Employee.class);
+            var results = query.getResultList();
+            return results;
+        });
     }
 
+    public boolean updateAllSalary(long id){
+        return false;
+    }
+
+    public List<Employee> getAllFirstName(){
+        return null;
+    }
 }

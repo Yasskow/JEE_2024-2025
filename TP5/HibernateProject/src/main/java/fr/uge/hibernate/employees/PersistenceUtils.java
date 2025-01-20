@@ -23,17 +23,26 @@ public class PersistenceUtils {
             tx.begin();
             consumer.accept(em);
             tx.commit();
-        }catch(Exception e){
+        }catch (Exception e){
             tx.rollback();
             throw e;
         }finally {
             em.close();
         }
-        return;
     }
 
     public static <T> T inTransaction(Function<EntityManager,T> action){
-
-        return null;
+        var em = ENTITY_MANAGER_FACTORY.createEntityManager();
+        var tx = em.getTransaction();
+        try{
+            tx.begin();
+            var res = action.apply(em);
+            tx.commit();
+            return res;
+        }catch(Exception e){
+            throw e;
+        }finally {
+            em.close();
+        }
     }
 }
